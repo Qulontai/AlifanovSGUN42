@@ -92,12 +92,12 @@ namespace Tanks
     ""maps"": [
         {
             ""name"": ""Tank"",
-            ""id"": ""0456a98f-e33f-4a92-8682-113f36d1e7b8"",
+            ""id"": ""a0450e48-44b9-4e0d-8461-f2b2f6ff6e5e"",
             ""actions"": [
                 {
                     ""name"": ""Handbreak"",
                     ""type"": ""Button"",
-                    ""id"": ""f871e964-5d8e-4d5f-bd51-a515605765a6"",
+                    ""id"": ""c1c4de12-ee63-487c-9224-03a49b8960d1"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -106,7 +106,7 @@ namespace Tanks
                 {
                     ""name"": ""Movement"",
                     ""type"": ""Value"",
-                    ""id"": ""a65cf1de-80e0-413c-b749-3745214b3d8e"",
+                    ""id"": ""d4f0236c-3db3-4ea2-937a-59a7deed4052"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -116,7 +116,7 @@ namespace Tanks
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""2aaf938f-1ee8-44fd-a6c9-2bbec1a9f717"",
+                    ""id"": ""d23b3cba-cc7f-4df5-a652-5d7a961e9c79"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -126,8 +126,8 @@ namespace Tanks
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""5a80663a-3ac3-4996-b75b-62f575d15f2a"",
+                    ""name"": ""WASD"",
+                    ""id"": ""72e883c6-1e79-4759-9e27-a4bcd430728e"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -138,7 +138,7 @@ namespace Tanks
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""51f5e9c8-caaa-4e11-8a7a-f6c7a9b3c1ba"",
+                    ""id"": ""f859befa-66af-4add-8a14-dd2ca90b8e39"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -149,7 +149,7 @@ namespace Tanks
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""bb25c2b2-1af3-448e-8921-eb3e7c5dc00f"",
+                    ""id"": ""7bab3010-1167-4571-a44b-3f82c211bbac"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -160,8 +160,8 @@ namespace Tanks
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""2bdc6015-a277-45b9-bd9f-be3f395e41a4"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""id"": ""a4566853-8bc7-4148-8872-1a2ec37a2dca"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -171,8 +171,8 @@ namespace Tanks
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""34423f03-ddcf-4ad9-8136-8cfd204ed831"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""id"": ""e7b25e1e-fa46-4265-90af-b3583bf720bd"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -184,12 +184,12 @@ namespace Tanks
         },
         {
             ""name"": ""Turret"",
-            ""id"": ""138e8642-c969-416f-a7b9-3d50c7de4b35"",
+            ""id"": ""aa27936b-2902-4d61-bfc3-7e6d93dd79a8"",
             ""actions"": [
                 {
                     ""name"": ""Fire"",
                     ""type"": ""Button"",
-                    ""id"": ""88401ea6-1593-43f7-ba51-3fd4dbe470f5"",
+                    ""id"": ""17cf91a6-decc-48d6-81e0-b3b8cc1e6fd3"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -198,7 +198,7 @@ namespace Tanks
                 {
                     ""name"": ""Focus"",
                     ""type"": ""Value"",
-                    ""id"": ""b57c5270-2d43-46cd-9995-16fb0cb7c8df"",
+                    ""id"": ""2ba38e2b-332e-4eb3-b42a-08682e3752be"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -208,7 +208,7 @@ namespace Tanks
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""59bc5589-ee7e-4079-b276-6f10d837dd29"",
+                    ""id"": ""5e59b9c8-53b7-44b3-b8a2-f8c1d9de8dd2"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -219,7 +219,7 @@ namespace Tanks
                 },
                 {
                     ""name"": """",
-                    ""id"": ""764aa74c-1431-4748-bae1-ca72692a19ef"",
+                    ""id"": ""a28a0b6e-7645-455f-be53-96c0146ba0f6"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
