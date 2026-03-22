@@ -173,17 +173,20 @@ MonoBehaviour:
   - {fileID: 7893472617731231035}
   - {fileID: 6018922348865948374}
   - {fileID: 6759201548290271135}
-  - {fileID: 6018922348865948374}
+  - {fileID: 2536412943499421914}
   _skidAudioSource: {fileID: 4180609954057508226}
   _transmission: {fileID: 11400000, guid: 5a15748ea50c9954cb0d4d06851b50b2, type: 2}
-  _maxSteerAngle: 25
+  _maxSteerAngle: 14
+  _steerResponse: 3.5
+  _steerAssistSpeed: 35
+  _highSpeedSteerFactor: 0.45
   _maxHandbrakeTorque: 100
   _centreOfMass: {x: 0, y: -0.4, z: 0}
   _downforce: 10
   _slipLimit: 0.3
   _reverseMult: 0.4
-  _maxSpeedFOV: 200
-  _fov: {x: 40, y: 40}
+  _maxSpeedFOV: 55
+  _fov: {x: 52, y: 60}
   _debugTorque: 0
 --- !u!82 &4180609954057508226
 AudioSource:
@@ -379,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 2724116761347239523}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.69, y: -0.27, z: -0.6}
+  m_LocalPosition: {x: 0.78152126, y: -0.3376054, z: -0.5722881}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -867,7 +870,7 @@ Transform:
   m_GameObject: {fileID: 3841134628991674154}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -1.642028e-15, w: 1}
-  m_LocalPosition: {x: -0.69, y: -0.33760527, z: 0.55141276}
+  m_LocalPosition: {x: -0.7815211, y: -0.33760527, z: 0.55141276}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1158,10 +1161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 3, z: -6.44}
-  m_XDamping: 2
-  m_YDamping: 2
-  m_ZDamping: 0
+  m_FollowOffset: {x: 0, y: 3.4, z: -7.2}
+  m_XDamping: 0.45
+  m_YDamping: 0.6
+  m_ZDamping: 0.35
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -1183,10 +1186,10 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0.5
-  m_VerticalDamping: 0.5
+  m_HorizontalDamping: 0.35
+  m_VerticalDamping: 0.4
   m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenY: 0.58
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_SoftZoneWidth: 0
@@ -1420,7 +1423,7 @@ Transform:
   m_GameObject: {fileID: 7753089466653174938}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -1.642028e-15, w: 1}
-  m_LocalPosition: {x: 0.69, y: -0.33760533, z: 0.5514125}
+  m_LocalPosition: {x: 0.7815211, y: -0.33760527, z: 0.55141276}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

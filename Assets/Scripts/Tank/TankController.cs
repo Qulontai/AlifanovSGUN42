@@ -31,6 +31,12 @@ namespace Tanks
         
         [SerializeField, Space, Range(5f, 50f)] 
         private float _maxSteerAngle = 25f;
+        [SerializeField, Min(0.1f), Tooltip("Скорость изменения угла поворота колес")]
+        private float _steerResponse = 3.5f;
+        [SerializeField, Min(1f), Tooltip("Скорость, после которой уменьшается максимальный угол поворота")]
+        private float _steerAssistSpeed = 35f;
+        [SerializeField, Range(0.1f, 1f), Tooltip("Доля максимального угла поворота на высокой скорости")]
+        private float _highSpeedSteerFactor = 0.45f;
 
         [SerializeField, Min(0f)]
         private float _maxHandbrakeTorque = float.MaxValue;
@@ -70,6 +76,7 @@ namespace Tanks
             _body.centerOfMass = _centreOfMass;
             _controller = GetComponent<BaseInputController>();
             _prevPosition = transform.position;
+            _prevPosition.y = 0f;
 
             if (_skidAudioSource == null)
             {
@@ -99,9 +106,11 @@ namespace Tanks
         private void FixedUpdate()
         {
             _controller.ManualUpdate();
-            var angle = _controller.TankRotate * _maxSteerAngle;
-            _wheels[0].SteerAngle = angle;
-            _wheels[1].SteerAngle = angle;
+            var steerFactor = Mathf.Lerp(1f, _highSpeedSteerFactor, Mathf.InverseLerp(0f, _steerAssistSpeed, CurrentSpeed));
+            var targetAngle = _controller.TankRotate * _maxSteerAngle * steerFactor;
+            _currentSteerAngle = Mathf.MoveTowards(_currentSteerAngle, targetAngle, _steerResponse * _maxSteerAngle * Time.fixedDeltaTime);
+            _wheels[0].SteerAngle = _currentSteerAngle;
+            _wheels[1].SteerAngle = _currentSteerAngle;
 
             CalculateSpeed();
             ApplyDrive();
