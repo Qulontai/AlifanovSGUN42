@@ -1,0 +1,29 @@
+using UnityEngine;
+using UnityEngine.UIElements;
+
+/// <summary>
+/// Атрибут, для блокирования модификации сериализуемых полей через инспектор
+/// </summary>
+public class ReadOnlyAttribute : PropertyAttribute { }
+
+#if UNITY_EDITOR
+[UnityEditor.CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
+public class ReadOnlyPropertyDrawer : UnityEditor.PropertyDrawer
+{
+	//Для старой отрисовки через IMGUI
+	public override void OnGUI(Rect position, UnityEditor.SerializedProperty property, GUIContent label)
+	{
+		GUI.enabled = false;
+		UnityEditor.EditorGUI.PropertyField(position, property, label);
+		GUI.enabled = true;
+	}
+
+	//Для новой отрисовки через UIElements
+	public override VisualElement CreatePropertyGUI(UnityEditor.SerializedProperty property)
+	{
+		var element = base.CreatePropertyGUI(property) ?? new UnityEditor.UIElements.PropertyField(property);
+		element.SetEnabled(false);
+		return element;
+	}
+}
+#endif
